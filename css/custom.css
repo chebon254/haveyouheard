@@ -1,0 +1,207 @@
+body {
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #ff5f9a;
+}
+.loading {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+@media (max-width: 600px) {
+    .loading {
+        display: none;
+    }
+}
+.loading .mainContainer {
+    margin: 0 auto;
+    width: 90vw;
+    top: 0;
+    position: absolute;
+    height: calc(100vh - 35px);
+    margin-top: 35px;
+    display: block;
+}
+.loading .mainContainer img {
+    position: absolute;
+    left: calc(50% - 35px);
+    top: calc(50% - 35px);
+    transform: translate(-50%, -50%);
+    margin-left: 0.5rem;
+    z-index: 20;
+}
+@keyframes reduceImg {
+    0% {
+        left: calc(50% - 35px);
+        top: calc(50% - 35px);
+        width: 174px;
+        height: 104px;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        left: 5%;
+        top: 1%;
+        width: 77px;
+        height: 52px;
+        transform: translate(0%, 0%);
+    }
+}
+@media (max-width:1000px) {
+    .loading .mainContainer img{
+        display: none;
+    }
+}
+@media (min-width: 1000px) and (max-width: 1000px) {
+    .first-item header img {
+        display: block;
+    }
+}
+
+/* Optional: To hide the image for other screen widths */
+@media (min-width: 999px) {
+    .first-item header img {
+        display: none;
+    }
+}
+/* .mainContainer {
+    display: none;
+} */
+.mainContainer header div,
+.mainContainer .build {
+    opacity: 0;
+}
+.mainContainer .container-one .second-item .trust .box img {
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
+}
+@-webkit-keyframes trusted {
+    0%, 100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-85px);
+                transform: translateY(-85px);
+    }
+}
+@keyframes trusted {
+    0%, 100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-85px);
+                transform: translateY(-85px);
+    }
+}
+@media (min-width: 100px) and (max-width: 430px) {
+    @-webkit-keyframes trusted {
+        0%, 100% {
+            -webkit-transform: translateY(0);
+                    transform: translateY(0);
+        }
+        50% {
+            -webkit-transform: translateY(-50px);
+                    transform: translateY(-50px);
+        }
+    }
+    @keyframes trusted {
+        0%, 100% {
+            -webkit-transform: translateY(0);
+                    transform: translateY(0);
+        }
+        50% {
+            -webkit-transform: translateY(-50px);
+                    transform: translateY(-50px);
+        }
+    }
+}
+.mainContainer .container-two .item .card-container .card .next {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: .23s ease-in-out;
+}
+.mainContainer .container-two .item .card-container .card .next img {
+    transition: .23s ease-in-out;
+}
+.mainContainer .container-two .item .card-container .card .next img:not(:last-of-type) {
+    margin-right: 15px;
+    margin-left: -42px;
+}
+.mainContainer .container-two .item .card-container .card .next:hover img:not(:last-of-type) {
+    margin-left: 40px;
+}
+.mainContainer .container-three .second-item .learn .btn:hover img {
+    animation: moveArrow .5s ease-in-out forwards;
+}
+@keyframes moveArrow {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+.mainContainer .container-four .reviews-card .card .star svg {
+    animation-delay: 3s;
+}
+@keyframes showStar {
+    from {
+        transform: perspective(2500px) rotateY(
+            -100deg);
+    }
+    to {
+        transform: perspective(2500px) rotateY(0);
+    }
+}
+
+
+/* Video Container Styles */
+.video-container {
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    z-index: 99;
+    width: 250px;
+    height: 350px;
+    background-color: rgba(187, 11, 109, 0.4); /* Updated opacity to 0.5 */
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Center video horizontally */
+    align-items: center; /* Center video vertically */
+}
+
+/* Video Player Styles */
+.video-player {
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+}
+
+/* Remove Volume and Speed Controls */
+.controls {
+    display: none; /* Hide the controls */
+}
+
+/* Media Queries for Adjusting Container Size */
+
+
+@media (max-width: 430px) {
+    .video-container {
+        width: 120px;
+        height: 200px;
+    }
+}
