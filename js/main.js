@@ -25,11 +25,9 @@ var mobileText=document.getElementsByClassName('mobile-text');
 
 // modal section for sending forms values
     //open modal
-Array.from(sendContact).forEach((el)=>{
-    el.addEventListener('click',()=>{
-        modal.style.display='block'
-        document.body.style.overflowY='hidden'
-    })
+el.addEventListener('click',()=>{
+    modal.style.display='block'
+    document.body.style.overflowY='hidden'
 })
     //close modal
 closeM.addEventListener('click',()=>{
@@ -237,67 +235,3 @@ function MobileScroll(){
 
 
 //submit form section
-var submitForm=document.getElementsByClassName('submit-form')[0];
-var Form=document.getElementsByClassName('form')[0];
-
-submitForm.addEventListener('click',function(e){
-    if(Form.checkValidity()){
-        e.preventDefault();
-        let email=document.getElementById('email').value;
-        let name=document.getElementById('name').value;
-        let message=document.getElementById('message').value;
-        SendEmail(name,email, message)
-    }
-    // console.log('ml',email)
-})
-//submit on subscribe button
-var Suscribe=document.getElementsByClassName('subscribe')[0];
-var formS=document.getElementsByClassName('formS')[0];
-Suscribe.addEventListener('click',(e)=>{
-    if(formS.checkValidity()){
-        e.preventDefault()
-        let emailS=document.getElementsByClassName('emailS')[0].value;
-        Email.send({
-            Host:"smtp.gmail.com",
-            Username:'moikdb1@gmail.com',
-            Password:'marmite90',
-            To:'moikdb1@gmail.com',
-            From:'moikdb1@gmail.com',
-            Subject:`email subscriber`,
-            Body:`Email:${emailS}`
-        })
-            .then((message)=>{
-                if(message=='OK'){
-                    // alert('successful')
-                    formS.reset();
-                }
-                else{
-                    console.log('error:',message)
-                }
-            })
-    }
-})
-
-//send email function
-
-function SendEmail(name,email,message){
-    Email.send({
-        Host:"smtp.gmail.com",
-        Username:'moikdb1@gmail.com',
-        Password:'marmite90',
-        To:'moikdb1@gmail.com',
-        From:'moikdb1@gmail.com',
-        Subject:`${name} send you a message`,
-        Body:`Name:${name} <br>Email:${email} <br>Message:${message} `
-    })
-        .then((message)=>{
-            if(message=='OK'){
-                Form.reset()
-                modal.style.display='none'
-                document.body.style.overflowY='auto'
-            }
-            else{
-                console.log('error:',message)
-            }
-        })
-}

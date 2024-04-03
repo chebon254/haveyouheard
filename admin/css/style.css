@@ -1,0 +1,245 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.container {
+  margin: auto;
+  max-width: 1200px;
+  padding: 10px 16px 10px;
+}
+
+/* == Login & Register Pages == */
+.form {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.message {
+  height: 20px;
+  font-size: 10px !important;
+  font-weight: 600;
+  padding: 10px 0px !important;
+}
+.message span#successMessage {
+  color: green !important;
+  font-size: 10px !important;
+  font-weight: 600;
+}
+.message span#errorMessage {
+  color: red !important;
+  font-size: 10px !important;
+  font-weight: 600;
+}
+form {
+  width: 100%;
+  max-width: 500px;
+  min-width: 280px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+.form-control {
+  padding: 10px 0px;
+  width: 100%;
+}
+
+.form-control h1 {
+  color: #2b1d4f;
+}
+.form-control p {
+  margin: 10px 0px 0px;
+  font-weight: 500;
+  color: #2b1d4f;
+}
+p.account-related {
+  text-align: center !important;
+}
+p.account-related a {
+  padding: 0px 4px;
+  color: #2b1d4f;
+}
+p.account-related a:hover {
+  color: #FF609A;
+}
+.form-control label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2b1d4f;
+}
+
+.form-control input {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #f2f0f9;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2b1d4f;
+  border-radius: 16px;
+  padding: 0px 16px;
+}
+button {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #f2f0f9;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2b1d4f;
+  border-radius: 10px;
+  padding: 0px 16px;
+  background-color: #f2f0f9;
+}
+button:hover {
+  background-color: #FF609A;
+  color: #ffffff;
+}
+.tab-link-btns{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+.tab-link-btns button{
+  width: fit-content;
+  border-radius: 0px !important;
+  margin-right: 4px;
+}
+/* == || Login & Register Pages == */
+
+/* == TABLES == */
+.table h2 {
+  margin: 10px 0px;
+}
+table {
+  width: 100% !important;
+  border-collapse: collapse;
+  margin: 20px auto;
+  border-radius: 8px;
+  margin: 40px 0px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+iframe {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+th,
+td {
+  height: 60px;
+  padding: 10px 10px 10px 20px;
+  text-align: left;
+  border-bottom: 1px solid #d9d5ec;
+  color: #2b1d4f;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+td:first-child {
+  width: 50px; /* Adjust the width as needed */
+}
+.dashboard-table td:nth-child(2) {
+  font-weight: 600;
+}
+tbody tr:hover {
+  background-color: #f2f0f9;
+}
+tr.last {
+  height: 20px !important;
+  background-color: #ffffff !important;
+}
+
+td a {
+  text-decoration: none;
+  color: #2b1d4f;
+  display: block;
+  padding: 10px;
+  font-weight: 600;
+}
+td a:hover {
+  color: #FF609A;
+}
+/* == TABLES == */
+
+/* == HOME PG == */
+nav {
+  background-color: #ffffff;
+  height: 70px;
+}
+nav .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+.logged-user span:nth-child(2) {
+  font-weight: 600;
+}
+/* == HOME PG == */
+#detailsModal{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 12px #00000033;
+  background-color: #ffffff;
+}
+#detailsModal button{
+  height: 40px !important;
+  width: 40px !important;
+  border-radius: 20px !important;
+  background-color: #00000000;
+  color: #2b1d4f;
+  cursor: pointer;
+}
+#detailsModal button:hover{
+  color: #FF609A;
+}
+.go-to-site{
+  margin: 20px auto 10px;
+  padding: 4px 10px;
+  color: #2b1d4f;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.go-to-site:hover{
+  color: #FF609A;
+}
+.p-go-to-site{
+  text-align: center;
+}

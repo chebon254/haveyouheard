@@ -11,7 +11,7 @@ function lottieAnim(){
         animType:'svg',
         loop:true,
         autoplay:true,
-        path:"https://assets2.lottiefiles.com/packages/lf20_kf0ycibw.json"
+        path:"lf20_kf0ycibw.json"
     });
 
     //rocket lottiefiles animation
@@ -23,7 +23,7 @@ function lottieAnim(){
         animType:'svg',
         loop:true,
         autoplay:true,
-        path:"https://assets3.lottiefiles.com/packages/lf20_fok1irtr.json"
+        path:"lf20_fok1irtr.json"
     });
 
     //saly lottiefiles animation
@@ -35,6 +35,6 @@ function lottieAnim(){
         animType:'svg',
         loop:true,
         autoplay:true,
-        path:"https://assets3.lottiefiles.com/packages/lf20_mjhfdfno.json"
+        path:"lf20_mjhfdfno.json"
     });
 }
