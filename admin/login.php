@@ -1,5 +1,6 @@
 <?php
 include 'database.php';
+include 'logger.php';
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -18,13 +19,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Login successful
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['username'] = $row['username'];
+            logEvent('info', 'User ' . $row['username'] . ' logged in successfully');
             header('Location: index.php');
             exit;
         } else {
             $error = 'Invalid username or password';
+            logEvent('warning', 'Failed login attempt for user ' . $username);
         }
     } else {
         $error = 'Invalid username or password';
+        logEvent('warning', 'Failed login attempt for user ' . $username);
     }
 
     $stmt->close();

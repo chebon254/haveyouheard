@@ -1716,7 +1716,7 @@ body{
     background-color:#ff969e;
     border-radius:40px;
     align-self:start;
-    margin-top:15%;
+    margin-top:8%;
     display:grid;
     place-items:center;
     grid-template-rows:auto auto 1fr;
