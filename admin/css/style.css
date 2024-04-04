@@ -65,6 +65,15 @@ form {
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
+form.modal{
+  width: 100%;
+  max-width: 500px;
+  min-width: 280px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 0px;
+  box-shadow: none !important;
+}
 .form-control {
   padding: 10px 0px;
   width: 100%;

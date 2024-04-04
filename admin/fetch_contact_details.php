@@ -5,8 +5,8 @@ include 'database.php';
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    // Prepare and execute the SQL query
-    $stmt = $conn->prepare("SELECT name, email, message FROM contacts WHERE id = ?");
+    // Prepare and execute the SQL query to fetch contact details
+    $stmt = $conn->prepare("SELECT name, email, message, message_sent FROM contacts WHERE id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -19,5 +19,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
     }
 
     $stmt->close();
+} elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id']) && isset($_POST['messageSent'])) {
+    $id = $_POST['id'];
+    $messageSent = $_POST['messageSent'] === 'true';
+
+    // Prepare and execute the SQL query to update the message sent status
+    $stmt = $conn->prepare("UPDATE contacts SET message_sent = ? WHERE id = ?");
+    $stmt->bind_param("ii", $messageSent, $id);
+    $stmt->execute();
+    $stmt->close();
+
+    echo json_encode(['success' => true]);
 }
 ?>

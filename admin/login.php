@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
-    <link rel="icon shortcut" href="css/img/Cretiv Favicon White.png">
+    <link rel="icon shortcut" href="css/img/Logo.png">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- == Font == -->
