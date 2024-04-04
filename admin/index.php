@@ -466,18 +466,32 @@ $result_newsletter = $conn->query($sql_newsletter);
 
     // Function to download all data to Excel
     function downloadAllToExcel() {
-        // Send AJAX request to download all data to Excel
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "download_all_to_excel.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-                // Handle the response, such as triggering the download
-                console.log("All data downloaded to Excel successfully.");
-            }
-        };
-        xhr.send();
+  // Send AJAX request to download all data to Excel
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "download_all_to_excel.php", true);
+  xhr.responseType = 'blob'; // Set the response type to blob
+
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      // Create a temporary anchor element
+      var a = document.createElement('a');
+      a.href = window.URL.createObjectURL(xhr.response);
+      a.download = 'newsletter_data.xlsx'; // Set the desired file name
+      a.style.display = 'none';
+      document.body.appendChild(a);
+
+      // Trigger the download by clicking the anchor element
+      a.click();
+
+      // Remove the temporary anchor element
+      document.body.removeChild(a);
+    } else {
+      console.error('Failed to download Excel file');
     }
+  };
+
+  xhr.send();
+}
 
 </script>
 
