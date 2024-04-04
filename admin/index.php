@@ -39,7 +39,7 @@ $result_newsletter = $conn->query($sql_newsletter);
 <nav>
         <div class="container">
             <div class="logged-user">
-                <span>Welcome, </span>
+                <span>Hi, </span>
                 <span><?php echo $_SESSION['username']; ?>!</span>
                 <a href="../index.html" class="go-to-site"><i class="fa-solid fa-eye"></i> View Website</a>
             </div>
@@ -64,13 +64,17 @@ $result_newsletter = $conn->query($sql_newsletter);
             <table>
                 <tr>
                     <th>No.</th>
+                    <th>Unique Id</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Message</th>
                     <th>View</th>
                 </tr>
-                <?php while ($row = $result_contacts->fetch_assoc()) : ?>
+                <?php 
+                $rowNumber = 1; // Initialize row number
+                while ($row = $result_contacts->fetch_assoc()) : ?>
                     <tr>
+                        <td><?php echo $rowNumber++; ?></td> <!-- Increment and display row number -->
                         <td><?php echo $row['id']; ?></td>
                         <td><?php echo $row['name']; ?></td>
                         <td><?php echo $row['email']; ?></td>
@@ -87,10 +91,14 @@ $result_newsletter = $conn->query($sql_newsletter);
             <table>
                 <tr>
                     <th>No</th>
+                    <th>Unique id</th>
                     <th>Email</th>
                 </tr>
-                <?php while ($row = $result_newsletter->fetch_assoc()) : ?>
+                <?php 
+                $rowNumber = 1; // Initialize row number
+                while ($row = $result_newsletter->fetch_assoc()) : ?>
                     <tr>
+                        <td><?php echo $rowNumber++; ?></td> <!-- Increment and display row number -->
                         <td><?php echo $row['id']; ?></td>
                         <td><?php echo $row['email']; ?></td>
                     </tr>
@@ -103,7 +111,7 @@ $result_newsletter = $conn->query($sql_newsletter);
     <!-- Modal for displaying contact details -->
     <div id="detailsModal" class="modal">
         <div class="modal-content">
-            <button class="close"><i class="fa-solid fa-xmark"></i></button>
+            <button id="close-modal" class="close "><i class="fa-solid fa-xmark"></i></button>
             <h3>Contact Details</h3>
             <br>
             <br>
@@ -111,7 +119,13 @@ $result_newsletter = $conn->query($sql_newsletter);
             <p id="modalName"></p>
             <br>
             <h4>Email</h4>
-            <p id="modalEmail"></p>
+            <div class="modal-email-container">
+                <span id="modalEmail"></span>
+                <button id="copyEmailBtn" class="modal-copy">
+                    <i class="fa-regular fa-copy"></i>
+                    <span id="tooltipText"></span>
+                </button>
+            </div>
             <br>
             <h4>Message</h4>
             <p id="modalMessage"></p>
@@ -142,7 +156,7 @@ $result_newsletter = $conn->query($sql_newsletter);
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
-    // When the user clicks on the button, open the modal
+    // When the user clicks on the button, open the modal and fetch contact details
     function showDetails(id) {
         var xhr = new XMLHttpRequest();
 
@@ -161,9 +175,27 @@ $result_newsletter = $conn->query($sql_newsletter);
         xhr.open('GET', 'fetch_contact_details.php?id=' + id, true);
         xhr.send();
     }
+    // Get the copy email button
+    var copyEmailBtn = document.getElementById("copyEmailBtn");
+
+    // When the user clicks on the copy email button, copy the email to clipboard
+copyEmailBtn.onclick = function() {
+    var emailText = document.getElementById("modalEmail").textContent;
+    navigator.clipboard.writeText(emailText).then(function() {
+        var tooltipText = document.getElementById("tooltipText");
+        tooltipText.style.display = "block";
+        tooltipText.innerText = "Copied!";
+        setTimeout(function () {
+            tooltipText.style.display = "none";
+        }, 4000);
+    }).catch(function(error) {
+        console.error("Unable to copy email: ", error);
+    });
+}
+
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
+    document.getElementById('close-modal').onclick = function() {
         modal.style.display = "none";
     }
 

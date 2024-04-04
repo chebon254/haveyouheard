@@ -38,48 +38,80 @@ body,html{
 @media (min-width:1029px) and (max-width:1512px){
     body,html{
         min-width:1024px;
-        min-height:600px
+        min-height:600px;
     }
 }
 @media (min-width:100px) and (max-width:430px){
     body,html{
-        min-width:316px
+        min-width:316px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
     body,html{
-        min-width:700px
+        min-width:700px;
     }
 }
 .hide{
-    display:none!important
+    display:none!important;
 }
 .mainContainer{
-    justify-self:center;
-    position:relative;
+    margin: auto !important;
     width:100%;
     max-width:1512px;
-    min-width:1150px
+    min-width:1150px;
 }
-@media (min-width:1029px) and (max-width:1512px){
+/* @media (min-width:1029px) and (max-width:1512px){
     .mainContainer{
         min-width:1150px;
-        min-height:600px
+        min-height:600px;
     }
 }
 @media (min-width:100px) and (max-width:430px){
     .mainContainer{
-        min-width:320px
+        min-width:320px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer{
-        min-width:700px
+        min-width:700px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer{
-        min-width:1000px
+        min-width:1000px;
+    }
+} */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .mainContainer {
+        min-width: 320px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /* No rules defined for this range */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .mainContainer {
+        min-width: 700px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .mainContainer {
+        min-width: 1000px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .mainContainer {
+        min-width: 1150px;
+        min-height: 600px;
     }
 }
 .mainContainer .container-one{
@@ -97,10 +129,16 @@ body,html{
 .mainContainer .container-one .first-item{
     margin-top:1rem
 }
+body{
+    position: relative;
+    z-index: 0 !important;
+}
 .mainContainer .container-one .first-item header{
     display:grid;
     grid-template-columns:1fr 1fr;
-    margin-top:35px
+    margin-top:35px;
+    position: relative;
+    z-index: 1 !important;
 }
 .mainContainer .container-one .first-item header img{
     width:77px;
@@ -124,13 +162,13 @@ body,html{
 @media (min-width:100px) and (max-width:430px){
     .mainContainer .container-one .first-item header .btn{
         width:123px;
-        height:46px
+        height:46px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .container-one .first-item header .btn{
         width:163px;
-        height:46px
+        height:46px;
     }
 }
 .mainContainer .container-one .first-item header .btn span{
@@ -180,7 +218,7 @@ body,html{
 }
 @media (min-width:1029px) and (max-width:1512px){
     .mainContainer .container-one .first-item .build h1{
-        font-size:64px
+        font-size:64px;
     }
 }
 @media (min-width:100px) and (max-width:430px){
@@ -272,13 +310,13 @@ body,html{
 @media (min-width:100px) and (max-width:430px){
     .mainContainer .container-one .first-item .build .btn span{
         font-size:10px;
-        line-height:14px
+        line-height:14px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .container-one .first-item .build .btn span{
         font-size:.9rem;
-        line-height:14px
+        line-height:14px;
     }
 }
 .mainContainer .container-one .first-item .build .btn:hover{
@@ -398,17 +436,17 @@ body,html{
 @media (min-width:100px) and (max-width:430px){
     .mainContainer .container-one .second-item .trust .box{
         width:52px;
-        height:104.66px
+        height:104.66px;
     }
     .mainContainer .container-one .second-item .trust .box img{
         width:19.75px;
-        height:19.75px
+        height:19.75px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .container-one .second-item .trust .box{
         width:79px;
-        height:159px
+        height:159px;
     }
     .mainContainer .container-one .second-item .trust .box img{
         width:auto;
@@ -424,23 +462,55 @@ body,html{
     background-size:cover;
     position:relative
 }
-@media (min-width:1029px) and (max-width:1512px){
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .mainContainer .container-two {
+        min-height: 3128px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /* No rules defined for this range */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .mainContainer .container-two {
+        height: 1947px;
+        width: 100%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    /* No rules defined for this range */
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .mainContainer .container-two {
+        min-width: 1150px;
+        height: 2116px;
+    }
+}
+/* @media (min-width:1029px) and (max-width:1512px){
     .mainContainer .container-two{
         min-width:1150px;
-        height:2116px
+        height:2116px;
     }
 }
 @media (min-width:100px) and (max-width:430px){
     .mainContainer .container-two{
-        min-height:3128px
+        min-height:3128px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .container-two{
         height:1947px;
-        min-width:1000px
+        min-width:1000px;
     }
-}
+} */
 .mainContainer .container-two img{
     position:absolute;
     z-index:1;
@@ -485,7 +555,7 @@ body,html{
 }
 @media (min-width:1029px) and (max-width:1512px){
     .mainContainer .container-two .item h1:first-child{
-        margin-top:100px
+        margin-top:100px;
     }
 }
 @media (min-width:100px) and (max-width:430px){
@@ -618,13 +688,13 @@ body,html{
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .container-two .item .card-container .card{
         width:258px;
-        height:400px
+        height:400px;
     }
 }
 @media (min-width:1029px) and (max-width:1512px){
     .mainContainer .container-two .item .card-container .card{
         width:298px;
-        height:410px
+        height:410px;
     }
 }
 .mainContainer .container-two .item .card-container .card .image{
@@ -644,13 +714,13 @@ body,html{
 @media (min-width:100px) and (max-width:430px){
     .mainContainer .container-two .item .card-container .card .image .circle{
         width:76px;
-        height:76px
+        height:76px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .container-two .item .card-container .card .image .circle{
         width:76px;
-        height:76px
+        height:76px;
     }
 }
 .mainContainer .container-two .item .card-container .card .image img{
@@ -757,41 +827,70 @@ body,html{
     display:grid;
     grid-template-rows:auto 1fr
 }
-@media (min-width:1029px) and (max-width:1512px){
-    .mainContainer .container-three{
-        margin-top:0;
-        min-width:1150px
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .mainContainer .container-two {
+        min-height: 3128px;
+    }
+
+    .mainContainer .container-three {
+        margin-top: 0;
+        background-image: none;
+        height: 1437px;
     }
 }
-@media (min-width:100px) and (max-width:430px){
-    .mainContainer .container-three{
-        margin-top:0;
-        background-image:none;
-        height:1437px
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /* No rules defined for this range */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .mainContainer .container-two {
+        height: 1947px;
+        width: 100%;
+    }
+
+    .mainContainer .container-three {
+        margin-top: 0;
+        margin-top: 5rem;
+        background-image: url(../assets/images/Group100Tablet.png) !important;
+        height: 1500px;
+        width: 100%;
     }
 }
-@media (min-width:431px) and (max-width:1028px){
-    .mainContainer .container-three{
-        margin-top:0;
-        margin-top:5rem;
-        background-image:url(../assets/images/Group100Tablet.png)!important;
-        height:1500px;
-        min-width:1000px
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .mainContainer .container-three {
+        background-size: 83%;
     }
 }
-@media (min-width:1024px){
-    .mainContainer .container-three{
-        background-size:83%
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .mainContainer .container-two {
+        min-width: 1150px;
+        height: 2116px;
+    }
+
+    .mainContainer .container-three {
+        margin-top: 0;
+        min-width: 1150px;
     }
 }
-@media (min-width:1024px) and (max-width:1102px){
-    .mainContainer .container-three{
-        background-size:85%
+
+/* Specific ranges */
+@media (min-width: 1024px) and (max-width: 1102px) {
+    .mainContainer .container-three {
+        background-size: 85%;
     }
 }
-@media (min-width:1029px) and (max-width:1512px){
-    .mainContainer .container-three .first-item{
-        transform:translateY(25%)
+
+@media (min-width: 1029px) and (max-width: 1512px) {
+    .mainContainer .container-three .first-item {
+        transform: translateY(25%);
     }
 }
 .mainContainer .container-three .first-item h1{
@@ -829,7 +928,7 @@ body,html{
 }
 @media (min-width:1029px) and (max-width:1512px){
     .mainContainer .container-three .first-item p{
-        font-size:14px
+        font-size:14px;
     }
 }
 @media (min-width:100px) and (max-width:430px){
@@ -838,7 +937,7 @@ body,html{
         font-size:1.1rem;
         text-align:center;
         padding-right:5%;
-        font-size:13px
+        font-size:13px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
@@ -900,13 +999,13 @@ body,html{
 @media (min-width:100px) and (max-width:430px){
     .mainContainer .container-three .second-item .text-box .text .image-circle .circle{
         width:65px;
-        height:65px
+        height:65px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .container-three .second-item .text-box .text .image-circle .circle{
         width:65px;
-        height:65px
+        height:65px;
     }
 }
 .mainContainer .container-three .second-item .text-box .text .image-circle img{
@@ -919,13 +1018,13 @@ body,html{
 @media (min-width:100px) and (max-width:430px){
     .mainContainer .container-three .second-item .text-box .text .image-circle img{
         width:62px;
-        height:62px
+        height:62px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .container-three .second-item .text-box .text .image-circle img{
         width:62px;
-        height:62px
+        height:62px;
     }
 }
 .mainContainer .container-three .second-item .text-box .text .stroke{
@@ -966,7 +1065,7 @@ body,html{
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .container-three .second-item .text-box .text h1{
-        font-size:17px
+        font-size:17px;
     }
 }
 .mainContainer .container-three .second-item .text-box .text p{
@@ -981,7 +1080,7 @@ body,html{
 @media (min-width:100px) and (max-width:430px){
     .mainContainer .container-three .second-item .text-box .text p{
         width:70%;
-        font-size:12px
+        font-size:12px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
@@ -1069,17 +1168,17 @@ body,html{
 @media (min-width:100px) and (max-width:430px){
     .mainContainer .container-three .second-item .learn .btn{
         width:175px;
-        height:46px
+        height:46px;
     }
     .mainContainer .container-three .second-item .learn .btn img{
         width:25px;
-        height:25px
+        height:25px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .container-three .second-item .learn .btn{
         width:185px;
-        height:56px
+        height:56px;
     }
     .mainContainer .container-three .second-item .learn .btn img{
         width:auto;
@@ -1101,7 +1200,7 @@ body,html{
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .container-three .second-item .learn .btn a{
-        font-size:18px
+        font-size:18px;
     }
 }
 .mainContainer .container-three .second-item .learn .btn:hover{
@@ -1186,12 +1285,12 @@ body,html{
 }
 @media (min-width:100px) and (max-width:430px){
     .mainContainer .container-four h1{
-        font-size:42px
+        font-size:42px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .container-four h1{
-        font-size:56px
+        font-size:56px;
     }
 }
 .mainContainer .container-four .p{
@@ -1209,7 +1308,7 @@ body,html{
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .container-four .p{
-        font-size:17px
+        font-size:17px;
     }
 }
 .mainContainer .container-four .reviews-card{
@@ -1238,15 +1337,18 @@ body,html{
     }
 }
 @media (min-width:431px) and (max-width:1028px){
+    .mainContainer .container-four{
+        overflow: hidden;
+    }
     .mainContainer .container-four .reviews-card{
         grid-column-gap:1rem;
         grid-column-gap:1.5rem;
         overflow:initial;
         height:auto;
-        width:auto
+        width: 768px;
     }
     .mainContainer .container-four .reviews-card .first-card .star{
-        margin:.5rem 0
+        margin:.5rem 0;
     }
 }
 .mainContainer .container-four .reviews-card .card{
@@ -1337,12 +1439,12 @@ body,html{
 }
 @media (min-width:100px) and (max-width:430px){
     .mainContainer .container-four .reviews-card .card .people .text p:first-child{
-        font-size:11px
+        font-size:11px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .container-four .reviews-card .card .people .text p:first-child{
-        font-size:13.16px
+        font-size:13.16px;
     }
 }
 .mainContainer .container-four .reviews-card .card .people .text p:last-child{
@@ -1353,12 +1455,12 @@ body,html{
 }
 @media (min-width:100px) and (max-width:430px){
     .mainContainer .container-four .reviews-card .card .people .text p:last-child{
-        font-size:10px
+        font-size:10px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .container-four .reviews-card .card .people .text p:last-child{
-        font-size:12.14px
+        font-size:12.14px;
     }
 }
 .mainContainer .container-four .reviews-card .card:hover{
@@ -1390,11 +1492,11 @@ body,html{
 @media (min-width:1029px) and (max-width:1512px){
     .mainContainer .container-four .reviews-card .view-card .people p:first-child{
         font-size:17px;
-        line-height:25px
+        line-height:25px;
     }
     .mainContainer .container-four .reviews-card .view-card .people p:last-child{
         font-size:16px;
-        line-height:24px
+        line-height:24px;
     }
 }
 @media (min-width:100px) and (max-width:430px){
@@ -1438,15 +1540,79 @@ body,html{
     margin-top:10rem;
     position:relative
 }
-@media (min-width:1029px) and (max-width:1512px){
-    .mainContainer .last-container{
-        min-width:1150px
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .mainContainer .container-two {
+        min-height: 3128px;
+    }
+
+    .mainContainer .container-three {
+        margin-top: 0;
+        background-image: none;
+        height: 1437px;
     }
 }
-@media (min-width:431px) and (max-width:1028px){
-    .mainContainer .last-container{
-        height:976px;
-        min-width:1000px
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /* No rules defined for this range */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .mainContainer .container-two {
+        height: 1947px;
+        width: 100%;
+    }
+
+    .mainContainer .container-three {
+        margin-top: 0;
+        margin-top: 5rem;
+        background-image: url(../assets/images/Group100Tablet.png) !important;
+        height: 1500px;
+        width: 100%;
+    }
+
+    .mainContainer .last-container {
+        height: 976px;
+        width: 100%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .mainContainer .container-three {
+        background-size: 83%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .mainContainer .container-two {
+        min-width: 1150px;
+        height: 2116px;
+    }
+
+    .mainContainer .container-three {
+        margin-top: 0;
+        min-width: 1150px;
+    }
+
+    .mainContainer .last-container {
+        min-width: 1150px;
+    }
+}
+
+/* Specific ranges */
+@media (min-width: 1024px) and (max-width: 1102px) {
+    .mainContainer .container-three {
+        background-size: 85%;
+    }
+}
+
+@media (min-width: 1029px) and (max-width: 1512px) {
+    .mainContainer .container-three .first-item {
+        transform: translateY(25%);
     }
 }
 .mainContainer .last-container .image{
@@ -1510,7 +1676,7 @@ body,html{
 }
 @media (min-width:1029px) and (max-width:1512px){
     .mainContainer .last-container .item .title{
-        margin-top:50px
+        margin-top:50px;
     }
 }
 @media (min-width:100px) and (max-width:430px){
@@ -1535,7 +1701,7 @@ body,html{
 @media (min-width:100px) and (max-width:430px){
     .mainContainer .last-container .item .p{
         width:93%;
-        font-size:17px
+        font-size:17px;
     }
 }
 @media (min-width:431px) and (max-width:1028px){
@@ -1736,7 +1902,7 @@ body,html{
 }
 @media (min-width:431px) and (max-width:1028px){
     .mainContainer .last-container .footer p{
-        font-size:12px
+        font-size:12px;
     }
 }
 .mainContainer .modal{
@@ -1772,7 +1938,7 @@ body,html{
 @media (min-width:431px) and (max-width:769px){
     .mainContainer .modal .modal-container .contact{
         min-width:661px;
-        height:450px
+        height:450px;
     }
 }
 .mainContainer .modal .modal-container .contact .close{
@@ -1847,7 +2013,7 @@ body,html{
 }
 @media (min-width:431px) and (max-width:769px){
     .mainContainer .modal .modal-container .contact .content{
-        height:450px
+        height:450px;
     }
 }
 @media (min-width:431px){

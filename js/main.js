@@ -24,6 +24,7 @@ var desktopText=document.getElementsByClassName('desktop-text');
 var mobileText=document.getElementsByClassName('mobile-text');
 
 // modal section for sending forms values
+
     //open modal
 el.addEventListener('click',()=>{
     modal.style.display='block'

@@ -174,7 +174,16 @@ tr.last {
   height: 20px !important;
   background-color: #ffffff !important;
 }
-
+td span#successStatus {
+  color: green !important;
+  font-size: 10px !important;
+  font-weight: 600;
+}
+td span#errorStatus {
+  color: red !important;
+  font-size: 10px !important;
+  font-weight: 600;
+}
 td a {
   text-decoration: none;
   color: #2b1d4f;
@@ -217,7 +226,7 @@ nav .container {
   box-shadow: 2px 2px 12px #00000033;
   background-color: #ffffff;
 }
-#detailsModal button{
+#detailsModal button.close{
   height: 40px !important;
   width: 40px !important;
   border-radius: 20px !important;
@@ -225,8 +234,27 @@ nav .container {
   color: #2b1d4f;
   cursor: pointer;
 }
-#detailsModal button:hover{
+#detailsModal button.close:hover{
   color: #FF609A;
+}
+button.modal-copy{
+  height: 40px !important;
+  width: 40px !important;
+  border-radius: 20px !important;
+  background-color: #00000000;
+  color: #2b1d4f;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: 10px
+}
+span#tooltipText{
+  position: absolute;
+  top: -10px;
+  right: -100%;
 }
 .go-to-site{
   margin: 20px auto 10px;
@@ -242,4 +270,9 @@ nav .container {
 }
 .p-go-to-site{
   text-align: center;
+}
+.modal-email-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
