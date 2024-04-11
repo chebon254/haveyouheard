@@ -54,6 +54,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         crossorigin="anonymous" />
+    <style>
+        .password-container {
+            position: relative;
+        }
+
+        .password-container input {
+            padding-right: 30px; /* Make room for the eye icon */
+        }
+
+        .password-container i {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <main>
@@ -79,7 +96,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="password">Password</label>
                         <br>
                         <br>
-                        <input type="password" name="password" id="password" placeholder="Enter Password" required>
+                        <div class="password-container">
+                            <input type="password" name="password" id="password" placeholder="Enter Password" required>
+                            <i class="fas fa-eye-slash" id="togglePassword"></i>
+                        </div>
                     </div>
                     <div class="form-control">
                         <button type="submit">Log In</button>
@@ -92,5 +112,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </main>
     <script src="js/script.js"></script>
+    <script>
+        const togglePassword = document.querySelector("#togglePassword");
+        const passwordInput = document.querySelector("#password");
+
+        togglePassword.addEventListener("click", function () {
+            const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+            passwordInput.setAttribute("type", type);
+            this.classList.toggle("fa-eye");
+            this.classList.toggle("fa-eye-slash");
+        });
+    </script>
 </body>
 </html>

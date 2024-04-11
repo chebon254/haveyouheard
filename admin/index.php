@@ -161,7 +161,9 @@ $result_newsletter = $conn->query($sql_newsletter);
                 <a href="../index.html" class="go-to-site"><i class="fa-solid fa-eye"></i> View Website</a>
             </div>
             <div class="logged-user">
-                <a href="logout.php">Logout?</a>
+                <a href="change_password.php"><i class="fa-solid fa-key"></i> Change Password</a>
+                <span> | </span>
+                <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout?</a>
             </div>
         </div>
     </nav>

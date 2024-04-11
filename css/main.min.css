@@ -48,7 +48,7 @@ body,html{
 }
 @media (min-width:431px) and (max-width:1028px){
     body,html{
-        min-width:700px;
+        min-width:100%;
     }
 }
 .hide{
@@ -58,7 +58,6 @@ body,html{
     margin: auto !important;
     width:100%;
     max-width:1512px;
-    min-width:1150px;
 }
 /* @media (min-width:1029px) and (max-width:1512px){
     .mainContainer{
@@ -88,9 +87,18 @@ body,html{
     }
 }
 
+@media (min-width:540px) and (max-width:640px){
+    .mainContainer{
+        width: 100% !important;
+    }
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     /* No rules defined for this range */
+    .mainContainer {
+        min-width: 500px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -235,7 +243,7 @@ body{
         padding-left:8%;
         text-align:left;
         font-size:42px;
-        width:80%
+        width:90%
     }
 }
 .mainContainer .container-one .first-item .build h1:first-child{
