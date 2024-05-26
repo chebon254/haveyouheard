@@ -35,61 +35,61 @@ $result_newsletter = $conn->query($sql_newsletter);
     <!-- == Icons == -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous" />
     <style>
-        body{
-            position: relative;
+            body{
+                position: relative;
+            }
+            /* Popup container */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            z-index: 9999;
         }
-        /* Popup container */
-.popup-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    z-index: 9999;
-}
 
-/* Popup */
-.popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-}
+        /* Popup */
+        .popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
 
-/* Popup title */
-.popup h2 {
-    margin-top: 0;
-}
+        /* Popup title */
+        .popup h2 {
+            margin-top: 0;
+        }
 
-/* Popup buttons */
-.button-container {
-    margin-top: 20px;
-}
+        /* Popup buttons */
+        .button-container {
+            margin-top: 20px;
+        }
 
-.confirm-btn,
-.cancel-btn {
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
+        .confirm-btn,
+        .cancel-btn {
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
 
-.confirm-btn {
-    background-color: #333;
-    color: white;
-}
+        .confirm-btn {
+            background-color: #333;
+            color: white;
+        }
 
-.cancel-btn {
-    background-color: #ddd;
-    color: #333;
-    margin-left: 10px;
-}
+        .cancel-btn {
+            background-color: #ddd;
+            color: #333;
+            margin-left: 10px;
+        }
 
     </style>
     <script>
